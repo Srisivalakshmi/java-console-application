@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class Calcul {
+    public static double calc(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double result = 0;
+        while (true) {
+            System.out.println("Enter the operation(+,-,*,/,^,exit):");
+            String op = scan.next();
+            if (op.equals("exit")) {
+                break;
+            } else {
+                System.out.println("Enter the 1st number:");
+                Double num1 = scan.nextDouble();
+                System.out.println("Enter the 2nd number:");
+                Double num2 = scan.nextDouble();
+
+
+                switch (op) {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        if (num2 != 0) {
+                            result = num1 / num2;
+                        }
+                        break;
+                    case "^":
+
+
+                }
+                System.out.println("Result=" + result);
+
+            }
+
+
+        }
+        return result;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    double add(double a, double b, double c) {
+        return a + b + c;
+    }
+    double sub(double a,double b){
+        return a - b;
+    }
+    double sub(double a, double b, double c){
+        return a - b - c;
+    }
+    double multi(double a, double b) {
+        return a * b;
+    }
+    double multi(double a, double b, double c){
+        return a * b * c;
+    }
+
+    double divide(double a, double b) {
+        return a / b;
+    }
+    double divide(double a, double b, double c){
+        return a / b / c;
+    }
+
+}
