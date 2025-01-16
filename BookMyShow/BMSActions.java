@@ -8,7 +8,6 @@ public class BMSActions {
         Scanner scanner = new Scanner(System.in);
         AdminActions adminActions = new AdminActions();
 
-        // Initialize with default admin and user
         BMS.getAdminList().add(new Admin("admin", 1234));
         BMS.getUserList().add(new User("user", 5678));
 
